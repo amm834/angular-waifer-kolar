@@ -7,8 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'Home Page';
-  isClicked = false
+  data = 'Hello World'
 
   constructor() {
   }
@@ -16,8 +15,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggle(): void {
-    this.isClicked = !this.isClicked;
-  }
 
 }
