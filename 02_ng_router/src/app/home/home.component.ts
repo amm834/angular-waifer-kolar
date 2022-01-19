@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  title = 'Home Page';
+  isClicked = false
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  toggle(): void {
+    this.isClicked = !this.isClicked;
   }
 
 }

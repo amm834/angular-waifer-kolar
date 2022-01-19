@@ -1,1 +1,13 @@
-<h1>Home page</h1>
+<h1>{{title}}</h1>
+
+<button class="btn btn-outline-primary" [disabled]="isClicked">Click Me</button>
+
+<p [ngClass]="{'bg-info':isClicked,'mt-3':true}">
+  Hello World from home page.
+</p>
+
+<input [value]="title">
+
+{{ isClicked}}
+
+<button class="btn btn-danger ms-3" (click)="toggle()">Toggle Me</button>
