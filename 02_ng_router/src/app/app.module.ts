@@ -7,6 +7,7 @@ import {NavComponent} from './nav/nav.component';
 import {ContactComponent} from "./contact/contact.component";
 import {HomeComponent} from './home/home.component';
 import {FormsModule} from "@angular/forms";
+import {StoreService} from "./services/store.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    StoreService
+  ],
   bootstrap: [AppComponent]
 })
 
