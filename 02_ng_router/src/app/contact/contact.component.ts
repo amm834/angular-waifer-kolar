@@ -1,14 +1,20 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {StoreService} from "../services/store.service";
 
 @Component({
   selector: 'app-contact',
   templateUrl: 'contact.component.html'
 })
-export class ContactComponent {
-  data: string;
-
-  constructor(private store: StoreService) {
-    this.data = this.store.getData;
+export class ContactComponent implements OnInit{
+  names:string[] = [];
+  constructor(private store:StoreService) {
   }
+
+
+  ngOnInit(): void {
+    this.names = this.store.getNames();
+  }
+
+
+
 }

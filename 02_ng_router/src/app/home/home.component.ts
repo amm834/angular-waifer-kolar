@@ -7,15 +7,19 @@ import {StoreService} from "../services/store.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  names: string[] = []
 
-  data: string;
-
-  constructor(private store: StoreService) {
-    this.data = this.store.getData
+  constructor(
+    private store: StoreService
+  ) {
   }
 
   ngOnInit(): void {
+    this.names = this.store.getNames();
+  }
 
+  addName(name: string): void {
+    this.store.addName(name);
   }
 
 

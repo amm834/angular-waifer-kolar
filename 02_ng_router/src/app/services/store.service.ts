@@ -5,12 +5,22 @@ import {Injectable} from '@angular/core';
 })
 export class StoreService {
 
+  private
+
+
+
+  names: string[] = [];
+
   constructor() {
 
   }
 
-  get getData(): string {
-    return "I am a data";
+  getNames(): string[] {
+    return this.names;
+  }
+
+  addName(name: string): void {
+    this.names.push(name);
   }
 
 }
