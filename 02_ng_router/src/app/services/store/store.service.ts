@@ -5,11 +5,7 @@ import {Injectable} from '@angular/core';
 })
 export class StoreService {
 
-  private
-
-
-
-  names: string[] = [];
+  private names: string[] = [];
 
   constructor() {
 

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {StoreService} from "../services/store.service";
+import {StoreService} from "../services/store/store.service";
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,7 @@ import {StoreService} from "../services/store.service";
 })
 export class HomeComponent implements OnInit {
   names: string[] = []
+  toggle: boolean = true
 
   constructor(
     private store: StoreService
@@ -20,6 +21,10 @@ export class HomeComponent implements OnInit {
 
   addName(name: string): void {
     this.store.addName(name);
+  }
+
+  toggleMe() {
+    this.toggle = !this.toggle;
   }
 
 

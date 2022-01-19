@@ -7,19 +7,19 @@ import {NavComponent} from './nav/nav.component';
 import {ContactComponent} from "./contact/contact.component";
 import {HomeComponent} from './home/home.component';
 import {FormsModule} from "@angular/forms";
-import {StoreService} from "./services/store.service";
+import {StoreService} from "./services/store/store.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     StoreService
