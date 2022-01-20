@@ -1,22 +1,37 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
+
     <h6 class="display-6 font-monospace my-3 text-center">Base Converter</h6>
-    <form action="">
+    <form [formGroup]="converterForm"
+    >
       <div class="mt-3">
         <label class="form-label" for="decimal">Decimal</label>
-        <input class="form-control" type="text" id="decimal" name="decimal">
+        <input class="form-control" type="text" id="decimal" name="decimal"
+               formControlName="decimal"
+               (ngModelChange)="onDecimalChange($event)"
+        >
       </div>
       <div class="mt-3">
         <label class="form-label" for="binary">Binary</label>
-        <input class="form-control" type="text" id="binary" name="binary">
+        <input class="form-control" type="text" id="binary" name="binary"
+               formControlName="binary"
+               (ngModelChange)="onBinaryChange($event)"
+
+        >
       </div>
       <div class="mt-3">
         <label class="form-label" for="octal">Octal</label>
-        <input class="form-control" type="text" id="octal" name="octal">
+        <input class="form-control" type="text" id="octal" name="octal"
+               formControlName="octal"
+               (ngModelChange)="onOctalChange($event)"
+        >
       </div>
       <div class="mt-3">
         <label class="form-label" for="hexadecimal">Hexadecimal</label>
-        <input class="form-control" type="text" id="hexadecimal" name="hexadecimal">
+        <input class="form-control" type="text" id="hexadecimal" name="hexadecimal"
+               formControlName="hexadecimal"
+               (ngModelChange)="onHexadecimalChange($event)"
+        >
       </div>
     </form>
   </div>
