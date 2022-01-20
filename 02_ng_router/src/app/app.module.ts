@@ -9,6 +9,8 @@ import {HomeComponent} from './home/home.component';
 import {FormsModule} from "@angular/forms";
 import {StoreService} from "./services/store/store.service";
 import { PipingComponent } from './piping/piping.component';
+import { SortPipe } from './pipes/sort/sort.pipe';
+import { AddPipe } from './pipes/add/add.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { PipingComponent } from './piping/piping.component';
     ContactComponent,
     HomeComponent,
     PipingComponent,
+    SortPipe,
+    AddPipe,
   ],
   imports: [
     BrowserModule,

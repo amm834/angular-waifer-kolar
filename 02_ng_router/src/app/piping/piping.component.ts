@@ -9,6 +9,7 @@ export class PipingComponent implements OnInit {
 
   name: string = 'Aung Myat Moe';
   now: Date = new Date();
+  numbers: number[] = [1, 2, 3, 4, 5];
 
   constructor() {
   }
