@@ -8,9 +8,10 @@ import {ContactComponent} from "./contact/contact.component";
 import {HomeComponent} from './home/home.component';
 import {FormsModule} from "@angular/forms";
 import {StoreService} from "./services/store/store.service";
-import { PipingComponent } from './piping/piping.component';
-import { SortPipe } from './pipes/sort/sort.pipe';
-import { AddPipe } from './pipes/add/add.pipe';
+import {PipingComponent} from './piping/piping.component';
+import {SortPipe} from './pipes/sort/sort.pipe';
+import {AddPipe} from './pipes/add/add.pipe';
+import {TemplateDrivenFormComponent} from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { AddPipe } from './pipes/add/add.pipe';
     PipingComponent,
     SortPipe,
     AddPipe,
+    TemplateDrivenFormComponent,
+
   ],
   imports: [
     BrowserModule,

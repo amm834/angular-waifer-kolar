@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="display-6 text-center font-monospace">Template Driven Form</h3>
+  <form action=""
+        #registerForm="ngForm"
+        (ngSubmit)="sendData(registerForm.value)"
+  >
+    <div class="mt-3">
+      <label class="form-label" for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" ngModel>
+    </div>
+    <div class="mt-3">
+      <label class="form-label" for="email">Email</label>
+      <input type="text" class="form-control" id="email" name="email" ngModel>
+    </div>
+    <div class="mt-3">
+      <label class="form-label" for="password">Password</label>
+      <input type="text" class="form-control" id="password" name="password" ngModel>
+    </div>
+    <div class="mt-3">
+      <select name="language" class="form-select">
+        <option *ngFor="let language of languages" value="{{language}}">{{language}}</option>
+      </select>
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-outline-primary">Send</button>
+    </div>
+  </form>
+
+</div>

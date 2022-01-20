@@ -8,7 +8,7 @@ type accapableTypes = string | number | string[] | number[] | undefined;
 export class SortPipe implements PipeTransform {
 
   transform(value: any, type: accapableTypes): accapableTypes {
-    if (type === 'asce')
+    if (type === 'asc')
       return value.sort();
     else if (type === 'desc')
       return value.sort().reverse();
