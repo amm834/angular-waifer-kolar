@@ -1,0 +1,6 @@
+<div class="container my-5 col-md-8 offset-md-2">
+  <button class="btn btn-primary mx-2" (click)="moveMe()">Move Me</button>
+  <button class="btn btn-primary mx-2" (click)="scaleMe()">Scale Me</button>
+  <div [@myanimation]="state" class="box"></div>
+  <div [@moveAnimation]="move" class="box mt-3"></div>
+</div>
