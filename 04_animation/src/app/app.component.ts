@@ -8,7 +8,9 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   animations: [
     trigger('myanimation', [
       state('on', style({
-        transform: 'translateX(200px)'
+        transform: 'translateX(200px) rotate(160deg)',
+        background: 'red',
+        borderRadius: '30%'
       })),
       state('off', style({
         transform: 'translateX(0px)'
