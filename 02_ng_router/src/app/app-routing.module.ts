@@ -5,6 +5,7 @@ import {HomeComponent} from "./home/home.component";
 import {PipingComponent} from "./piping/piping.component";
 import {TemplateDrivenFormComponent} from "./template-driven-form/template-driven-form.component";
 import {ReactiveFormComponent} from "./reactive-form/reactive-form.component";
+import {BaseConverterComponent} from "./base-converter/base-converter.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   }, {
     path: 'reactive-form',
     component: ReactiveFormComponent
+  }, {
+    path: 'base-converter',
+    component: BaseConverterComponent
   }
 ];
 

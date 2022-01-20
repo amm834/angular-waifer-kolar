@@ -27,12 +27,11 @@ export class ReactiveFormComponent implements OnInit {
         Validators.required,
         Validators.email
       ])),
-      password: new FormControl('', Validators.compose([
-        Validators.required
-      ])),
+      password: new FormControl('', Validators.required),
       language: new FormControl('', Validators.required)
     })
   }
+
 
   sendData(data: string[]) {
     console.log(data)

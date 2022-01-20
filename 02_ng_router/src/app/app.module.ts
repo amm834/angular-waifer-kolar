@@ -13,6 +13,7 @@ import {SortPipe} from './pipes/sort/sort.pipe';
 import {AddPipe} from './pipes/add/add.pipe';
 import {TemplateDrivenFormComponent} from './template-driven-form/template-driven-form.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
+import { BaseConverterComponent } from './base-converter/base-converter.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
     AddPipe,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    BaseConverterComponent,
 
   ],
   imports: [
