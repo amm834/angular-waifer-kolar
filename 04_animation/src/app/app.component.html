@@ -1,8 +1,2 @@
-<div class="container my-5 col-md-8 offset-md-2">
-  <button class="btn btn-primary mx-2" (click)="moveMe()">Move Me</button>
-  <button class="btn btn-primary mx-2" (click)="scaleMe()">Scale Me</button>
-  <div [@myanimation]="state" class="box" (@myanimation.start)="animationStarted($event)"
-       (@myanimation.done)="animationDone($event)"
-  ></div>
-  <div [@moveAnimation]="move" class="box mt-3"></div>
-</div>
+<app-nav [title]="title" (emitClick)="clickSend($event)"></app-nav>
+
