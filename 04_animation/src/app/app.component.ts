@@ -41,5 +41,13 @@ export class AppComponent {
   scaleMe() {
     this.move = this.move === 'small' ? this.move = 'bigger' : this.move = 'small';
   }
+
+  animationStarted(event: any) {
+    console.log('animation started')
+  }
+
+  animationDone(event: any) {
+    console.log('animation was done')
+  }
 }
 
