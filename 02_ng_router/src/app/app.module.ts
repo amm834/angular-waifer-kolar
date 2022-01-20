@@ -6,12 +6,13 @@ import {AppComponent} from './app.component';
 import {NavComponent} from './nav/nav.component';
 import {ContactComponent} from "./contact/contact.component";
 import {HomeComponent} from './home/home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {StoreService} from "./services/store/store.service";
 import {PipingComponent} from './piping/piping.component';
 import {SortPipe} from './pipes/sort/sort.pipe';
 import {AddPipe} from './pipes/add/add.pipe';
 import {TemplateDrivenFormComponent} from './template-driven-form/template-driven-form.component';
+import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import {TemplateDrivenFormComponent} from './template-driven-form/template-drive
     SortPipe,
     AddPipe,
     TemplateDrivenFormComponent,
+    ReactiveFormComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     StoreService

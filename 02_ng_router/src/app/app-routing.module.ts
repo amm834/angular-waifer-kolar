@@ -4,6 +4,7 @@ import {ContactComponent} from "./contact/contact.component";
 import {HomeComponent} from "./home/home.component";
 import {PipingComponent} from "./piping/piping.component";
 import {TemplateDrivenFormComponent} from "./template-driven-form/template-driven-form.component";
+import {ReactiveFormComponent} from "./reactive-form/reactive-form.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path: 'template-driven-form',
     component: TemplateDrivenFormComponent
+  }, {
+    path: 'reactive-form',
+    component: ReactiveFormComponent
   }
 ];
 
