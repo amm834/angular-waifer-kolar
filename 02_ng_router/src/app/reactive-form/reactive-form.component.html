@@ -22,7 +22,9 @@
       </select>
     </div>
     <div class="mt-3">
-      <button class="btn btn-outline-primary">Send</button>
+      <button class="btn btn-outline-primary"  [disabled]="!formData.valid">
+        Send
+      </button>
     </div>
   </form>
 
