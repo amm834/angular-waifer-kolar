@@ -19,7 +19,8 @@ export class ReactiveFormComponent implements OnInit {
       username: new FormControl('', Validators.compose(
         [
           Validators.required,
-          Validators.minLength(6)
+          Validators.minLength(6),
+          Validators.pattern('[\\w\\s\\-]+')
         ]
       )),
       email: new FormControl('', Validators.compose([
