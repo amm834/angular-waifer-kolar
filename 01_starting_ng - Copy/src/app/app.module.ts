@@ -3,16 +3,20 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { RoundedDirective } from './rounded.directive';
-import { RadiusedDirective } from './radiused.directive';
-import { ElseDirective } from './else.directive';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { NavComponent } from './nav/nav.component';
+import { PostComponent } from './post/post.component';
+import { PostEditComponent } from './post-edit/post-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoundedDirective,
-    RadiusedDirective,
-    ElseDirective,
+    HomeComponent,
+    AboutComponent,
+    NavComponent,
+    PostComponent,
+    PostEditComponent,
   ],
   imports: [
     BrowserModule,
