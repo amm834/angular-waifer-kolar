@@ -17,7 +17,11 @@ export class HomeComponent implements OnInit {
   }
 
   goToPost() {
-    this.router.navigate(['post', 5])
+    this.router.navigate(['post', 5], {
+      queryParams: {
+        name: 'John', age: 30
+      }
+    })
   }
 
 }
