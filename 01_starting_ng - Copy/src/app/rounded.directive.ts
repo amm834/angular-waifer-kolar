@@ -1,4 +1,4 @@
-import {Directive, ElementRef} from '@angular/core';
+import {Directive, ElementRef, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appRounded]'
@@ -6,9 +6,11 @@ import {Directive, ElementRef} from '@angular/core';
 export class RoundedDirective {
 
   constructor(
-    public element: ElementRef
+    public elementRef: ElementRef,
+    public renderer: Renderer2
   ) {
-    this.element.nativeElement.style.backgroundColor = 'red';
+    // this.elementRef.nativeElement.style.backgroundColor = 'red';
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'red')
   }
 
 }
