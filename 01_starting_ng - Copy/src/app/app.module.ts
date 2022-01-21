@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { PostComponent } from './post/post.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PostEditComponent } from './post-edit/post-edit.component';
     NavComponent,
     PostComponent,
     PostEditComponent,
+    PostDetailComponent,
   ],
   imports: [
     BrowserModule,
