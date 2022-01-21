@@ -1,16 +1,19 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {PostEditGuardInterface} from "../post-edit.guard";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostComponent implements OnInit, PostEditGuardInterface {
   private id: number | undefined;
   private queryParams: any;
+  public canExit: boolean | undefined;
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     // this.id = this.activatedRoute.snapshot.params['id']
     // get named parameter
     this.activatedRoute.params.subscribe(
@@ -30,6 +33,18 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  goToHome() {
+    this.router.navigate([''])
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    if (!this.canExit) {
+      return confirm('Are you sure to leave from this page')
+    }
+
+    return this.canExit;
   }
 
 }

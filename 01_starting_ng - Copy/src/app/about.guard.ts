@@ -9,7 +9,7 @@ export class AboutGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm('Are you sure to continue?');
+    return confirm('Are you sure to enter this route?')
   }
 
 }
