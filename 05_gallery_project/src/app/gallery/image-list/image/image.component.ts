@@ -10,15 +10,12 @@ export class ImageComponent implements OnInit {
 
   @Input() image: Image | undefined;
 
+
   constructor() {
 
   }
 
   ngOnInit(): void {
-  }
-
-  onImageSelected(image: Image) {
-    console.log(image)
   }
 
 }

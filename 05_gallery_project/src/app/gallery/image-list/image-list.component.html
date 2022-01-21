@@ -1,11 +1,14 @@
-<div class="container mt-3">
-  <div class="row">
+<app-image-detail *ngIf="selectedImage" [selectedImage]="selectedImage"></app-image-detail>
+
+<div class="container">
+  <div class="row mt-3">
     <div class="col-md-3 my-3" *ngFor="let image of images">
       <div class="card border-0 shadow-sm">
-        <app-image [image]="image"></app-image>
+        <app-image [image]="image" (click)="onImageSelected(image)"></app-image>
       </div>
     </div>
   </div>
 </div>
+
 
 

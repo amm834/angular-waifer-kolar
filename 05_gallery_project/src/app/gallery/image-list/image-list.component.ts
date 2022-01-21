@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Image} from "./helper/image";
+import {ImageService} from "../../services/image.service";
 
 @Component({
   selector: 'app-image-list',
@@ -9,22 +10,18 @@ import {Image} from "./helper/image";
 export class ImageListComponent implements OnInit {
 
   images: Image[] = [];
-  totalImage = 4;
+  selectedImage: Image | undefined;
 
-  constructor() {
+  constructor(
+    private imageService: ImageService
+  ) {
   }
 
   ngOnInit(): void {
-    for (let i = 1; i <= this.totalImage; i++) {
-      this.images.push(
-        new Image(i,
-          `assets/images/sm-${i}.jpg`,
-          `assets/images/lg-${i}.jpg`,
-          `Description ${i}`,
-          `Title ${i}`
-        )
-      )
-    }
+    this.images = this.imageService.getImages();
   }
 
+  onImageSelected(image: Image) {
+    this.selectedImage = image;
+  }
 }
