@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['post', 5], {
       queryParams: {
         name: 'John', age: 30
-      }
+      },
+      fragment: 'section2'
     })
   }
 
