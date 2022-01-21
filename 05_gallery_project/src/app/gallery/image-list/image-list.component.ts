@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Image} from "./helper/image";
 import {ImageService} from "../../services/image.service";
 
@@ -10,7 +10,7 @@ import {ImageService} from "../../services/image.service";
 export class ImageListComponent implements OnInit {
 
   images: Image[] = [];
-  selectedImage: Image | undefined;
+  @Output() sendImage = new EventEmitter<Image>();
 
   constructor(
     private imageService: ImageService
@@ -22,6 +22,7 @@ export class ImageListComponent implements OnInit {
   }
 
   onImageSelected(image: Image) {
-    this.selectedImage = image;
+    this.sendImage.emit(image);
   }
+
 }

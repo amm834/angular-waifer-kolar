@@ -1,1 +1,2 @@
-<app-image-list></app-image-list>
+<app-image-detail [selectedImage]="image"></app-image-detail>
+<app-image-list (sendImage)="getImage($event)"></app-image-list>
