@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <div class="container">
     <div class="nav navbar-nav">
-      <a class="nav-item nav-link active" routerLink="/">WDE</a>
-      <a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLink="/about">About</a>
+      <a class="nav-item nav-link active" routerLink="/" routerLinkActive="active">WDE</a>
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active">Home</a>
+      <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">About</a>
       <a class="nav-item nav-link" [routerLink]="['post',2]" [queryParams]="{name:'Aung Aung',age:18}" fragment="section2">Post</a>
     </div>
   </div>
